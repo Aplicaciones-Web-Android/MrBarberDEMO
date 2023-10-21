@@ -20,7 +20,10 @@ function handleNotFoundError(message, res){
     }
 }
 
+const uniqueID = () => Date.now().toString(32) + Math.random().toString(32).substring(2)
+
 export{
     validateObjectId,
-    handleNotFoundError
+    handleNotFoundError,
+    uniqueID
 }
