@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AppointmentLayout from '../views/appointments/AppointmentLayout.vue'
-
+import AppointmentsLayout from '../views/appointments/AppointmentLayout.vue'
+import AuthAPI from '../api/AuthAPI'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,11 +12,29 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/admin',
+      name: 'admin',
+      component: () => import('../views/admin/AdminLayout.vue'),
+      meta: { requiresAdmin: true },
+      children: [
+        {
+          path: '',
+          name: 'admin-appointments',
+          component: () => import('../views/admin/AppointmentsView.vue'),
+        }
+      ]
+    },
+    {
       path: '/reservaciones',
       name: 'appointments',
-      component: AppointmentLayout,
+      component: AppointmentsLayout,
       meta: { requiresAuth: true },
       children: [
+        {
+          path: '',
+          name: 'my-appointments',
+          component: () => import('../views/appointments/MyAppointmentsView.vue'),
+        },
         {
           path: 'nueva',
           component: () => import('../views/appointments/NewAppointmentLayout.vue'),
@@ -32,6 +50,22 @@ const router = createRouter({
                 component: () => import('../views/appointments/AppointmentView.vue'),
             },
           ]
+        },
+        {
+          path: ':id/editar',
+          component: () => import('../views/appointments/EditAppointmentLayout.vue'),
+          children: [
+            {
+                path: '',
+                name: 'edit-appointment',
+                component: () => import('../views/appointments/ServicesView.vue'),
+            },
+            {
+                path: 'detalles',
+                name: 'edit-appointment-details',
+                component: () => import('../views/appointments/AppointmentView.vue'),
+            },
+          ]
         }
       ]
     },
@@ -39,7 +73,7 @@ const router = createRouter({
       path: '/auth',
       name: 'auth',
       component: () => import('../views/auth/AuthLayout.vue'),
-      children:[
+      children: [
         {
           path: 'registro',
           name: 'register',
@@ -54,10 +88,54 @@ const router = createRouter({
           path: 'login',
           name: 'login',
           component: () => import('../views/auth/LoginView.vue')
-        }
+        },
+        {
+          path: 'olvide-password',
+          name: 'forgot-password',
+          component: () => import('../views/auth/ForgotPasswordView.vue')
+        },
+        {
+          path: 'olvide-password/:token',
+          name: 'new-password',
+          component: () => import('../views/auth/NewPasswordView.vue')
+        },
       ]
     }
   ]
 })
+
+router.beforeEach( async (to, from, next) => {
+    const requiresAuth = to.matched.some(url => url.meta.requiresAuth)
+    if(requiresAuth) {
+      try {
+        const { data } =  await AuthAPI.auth()
+        if(data.admin) {
+          next({name: 'admin'})
+        } else {
+          next()
+        }
+      } catch (error) {
+        next({name: 'login'})
+      }
+    } else {
+      next()
+    }
+})
+
+router.beforeEach( async (to, from, next) => {
+  const requiresAdmin = to.matched.some(url => url.meta.requiresAdmin)
+  if(requiresAdmin) {
+    try {
+      await AuthAPI.admin()
+      next()
+    } catch (error) {
+      next({name: 'login'})
+    }
+  } else {
+    next()
+  }
+
+})
+
 
 export default router

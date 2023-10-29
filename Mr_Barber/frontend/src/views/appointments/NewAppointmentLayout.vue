@@ -6,7 +6,9 @@
     const route = useRoute()
     const appointments = useAppointmentsStore()
 
-    
+    onMounted(() => {
+        appointments.clearAppointmentData()
+    })
 </script>
 
 
@@ -28,8 +30,7 @@
             Cita y Resumen
         </RouterLink>
     </nav>
-    
-    <div class="space-y-8">
+    <div class="space-y-5">
         <RouterView />
     </div>
 </template>

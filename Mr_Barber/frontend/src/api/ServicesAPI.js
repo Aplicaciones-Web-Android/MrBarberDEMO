@@ -1,7 +1,8 @@
-import api from "../lib/axios"
+import api from "../lib/axios";
 
 export default {
-    all(){
+    all() {
         return api.get('/services')
     }
 }
+
