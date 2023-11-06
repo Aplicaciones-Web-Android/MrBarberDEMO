@@ -5,7 +5,7 @@ export async function sendEmailVerification({name, email, token }){
         process.env.EMAIL_HOST,
         process.env.EMAIL_PORT,
         process.env.EMAIL_USER,
-        process.env.EMIAL_PASS,
+        process.env.EMAIL_PASS,
     )
 
 //Enviar email
