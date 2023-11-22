@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
     import { onMounted } from 'vue'
     import { useRoute, useRouter } from 'vue-router'
     import AppointmentAPI from '../../api/AppointmentAPI';

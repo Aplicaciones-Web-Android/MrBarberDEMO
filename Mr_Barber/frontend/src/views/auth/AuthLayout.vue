@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
     import { useRoute } from 'vue-router'
     const route = useRoute()
 
@@ -16,7 +18,7 @@
         <nav class="mt-10 flex flex-col items-center space-y-5 lg:flex-row lg:justify-between lg:space-y-0">
             <RouterLink
                 v-for="authRoute in authRoutes"
-                class="uppercase font-bold text-white"
+                class="uppercase font-bold text-black"
                 :to="{name: authRoute.name}"
                 :class="{ 'hidden' : route.name === authRoute.name }"
             >{{ authRoute.text }}</RouterLink>

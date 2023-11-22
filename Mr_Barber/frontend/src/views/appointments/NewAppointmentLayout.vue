@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
     import { onMounted } from 'vue'
     import { useRoute } from 'vue-router'
     import { useAppointmentsStore } from '../../stores/appointments'

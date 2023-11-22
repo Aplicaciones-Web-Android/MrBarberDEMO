@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
     import { ref } from 'vue'
     import VueTailwindDatepicker from 'vue-tailwind-datepicker'
     import SelectedService from '../../components/SelectedService.vue'

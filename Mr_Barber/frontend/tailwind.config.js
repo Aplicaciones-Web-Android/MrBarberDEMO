@@ -10,8 +10,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        "vtd-primary" : colors.blue
+      backgroundImage :{
+        "app" : "url('/img/logo1.png')"
       }
     },
   },
