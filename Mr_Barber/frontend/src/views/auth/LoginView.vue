@@ -36,7 +36,6 @@
         name="email"
         placeholder="Email de Usuario"
         validation="required|email"
-        style="color: black"
         :validation-messages="{
             required: 'El Email es obligatorio',
             email: 'Email no válido'
