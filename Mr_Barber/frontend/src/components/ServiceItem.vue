@@ -10,18 +10,17 @@
         }
     })
 </script>
-
-
+bg-yellow-800 text-white' : 'bg-white'" :style="{ color: route.name === 'appointment-details' ? '#D2AC67' : '#D2AC67'}"
 <template>
     <div
         class="p-5 space-y-5 rounded-lg cursor-pointer"
-        :class="appointments.isServiceSelected(service._id) ? 'bg-blue-500 text-white' : 'bg-white'"
+        :class="appointments.isServiceSelected(service._id) ? 'bg-yellow-800 text-yellow-100' : 'bg-white'" :style="{ color: appointments.isServiceSelected(service._id) ? '' : '#D2AC67' }"
         @click="appointments.onServiceSelected(service)"
     >
         <p class="text-2xl font-light">{{ service.name }}</p>
         <p 
             class="text-4xl font-black"
-            :class="appointments.isServiceSelected(service._id) ? 'text-white' : 'text-blue-600'"
+            :class="appointments.isServiceSelected(service._id) ? 'text-yellow-100' : ''" :style="{ color: appointments.isServiceSelected(service._id) ? '' : '#D2AC67' }"
         >{{ formatCurrency( service.price ) }}</p>
     </div>
 </template>

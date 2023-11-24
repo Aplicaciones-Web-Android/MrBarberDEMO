@@ -1,15 +1,15 @@
 <script setup>
     import { useUserStore } from '../../stores/user'
-    const user = useUserStore()
     import { RouterLink } from 'vue-router';
+    const user = useUserStore()
+    
 
 </script>
 
 
-
 <template>
     <div class="flex justify-between">
-        <h1 class="text-2xl lg:text-6xl font-black text-white">Mr Barber</h1>
+        <h1 class="text-2xl lg:text-6xl font-black" style="color: #D2AC67;">Mr Barber</h1>
 
         <div class="flex flex-col space-y-5">
            <div class="flex gap-2 items-center">
@@ -17,7 +17,7 @@
 
                 <button
                     type="button"
-                    class="bg-red-600 hover:bg-red-700 p-2 text-white uppercase text-xs font-extrabold rounded-lg"
+                    class="bg-red-600 hover:bg-red-700 p-2 text-gray-100 uppercase text-xs font-extrabold rounded-lg"
                     @click="user.logout"
                 >
                     Cerrar Sesión
@@ -27,12 +27,12 @@
            <nav class="flex gap-2 items-center justify-end">
                 <RouterLink
                     :to="{name: 'my-appointments'}"
-                    class="p-3 text-gray-200 uppercase text-xs font-black rounded-lg"
+                    class="p-3 text-white uppercase text-xs font-black rounded-lg"
                 >Mis Citas</RouterLink>
 
                 <RouterLink
                     :to="{name: 'new-appointment'}"
-                    class="p-3 text-gray-200 uppercase text-xs font-black rounded-lg bg-blue-700"
+                    class="p-3 text-white uppercase text-xs font-black rounded-lg bg-yellow-800"
                 >
                     Nueva Cita
                 </RouterLink>

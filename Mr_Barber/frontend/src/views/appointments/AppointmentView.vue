@@ -32,10 +32,10 @@ import { RouterLink } from 'vue-router';
 
 
 <template>
-    <h2 class="text-4xl font-extrabold text-white">Detalles Cita y Resumen</h2>
-    <p class="text-white text-lg">A continuación verifica la información y confirma tu cita</p>
+    <h2 class="text-4xl font-extrabold" style="color: #D2AC67">Detalles Cita y Resumen</h2>
+    <p class="text-lg text-white" >A continuación verifica la información y confirma tu cita</p>
 
-    <h3 class="text-3xl font-extrabold text-white">Servicios</h3>
+    <h3 class="text-3xl font-extrabold" style="color: #D2AC67" >Servicios</h3>
 
     <p v-if="appointments.noServicesSelected" class="text-white text-2xl text-center">No hay servicios seleccionados</p>
 
@@ -46,13 +46,13 @@ import { RouterLink } from 'vue-router';
             :service="service"
         />
 
-        <p class="text-right text-white text-2xl">Total a pagar: 
+        <p class="text-right text-2xl" style="color: #D2AC67" >Total a pagar: 
             <span class="font-black">{{ formatCurrency(appointments.totalAmount) }}</span>
         </p>
     </div>
 
     <div class="space-y-8" v-if="!appointments.noServicesSelected">
-        <h3 class="text-3xl font-extrabold text-white">Fecha y Hora</h3>
+        <h3 class="text-3xl font-extrabold" style="color: #D2AC67">Fecha y Hora</h3>
 
         <div class="lg:flex gap-5 items-start">
             <div class="w-full lg:w-96 bg-white flex justify-center rounded-lg">
@@ -68,8 +68,8 @@ import { RouterLink } from 'vue-router';
             <div v-if="appointments.isDateSelected" class="flex-1 grid grid-cols-1 xl:grid-cols-2 gap-5 mt-10 lg:mt-0">
                 <button
                     v-for="hour in appointments.hours"
-                    class="block text-blue-500 rounded-lg text-xl font-black p-3 disabled:opacity-10"
-                    :class="appointments.time === hour ? 'bg-blue-500 text-white' : 'bg-white'"
+                    class="block text-yellow-800 rounded-lg text-xl font-black p-3 disabled:opacity-10"
+                    :class="appointments.time === hour ? 'bg-yellow-100 text-white' : 'bg-white'"
                     @click="appointments.time = hour"
                     :disabled="appointments.disableTime(hour) ? true : false"
                 >
@@ -80,7 +80,7 @@ import { RouterLink } from 'vue-router';
 
         <div v-if="appointments.isValidReservation" class="flex justify-end">
             <button
-                class="w-full md:w-auto bg-blue-500 p-3 rounded-lg uppercase font-black text-white"
+                class="w-full md:w-auto bg-yellow-800 p-3 rounded-lg uppercase font-black text-yellow-100"
                 @click="appointments.saveAppointment"
             >
                 Confirmar Reservación
