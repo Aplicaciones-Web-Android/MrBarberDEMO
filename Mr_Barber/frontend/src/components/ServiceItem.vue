@@ -15,7 +15,11 @@
 <template>
     <div
         class="p-5 space-y-5 rounded-lg cursor-pointer"
+<<<<<<< Updated upstream
         :class="appointments.isServiceSelected(service._id) ? 'bg-blue-500 text-white' : 'bg-white'"
+=======
+        :class="appointments.isServiceSelected(service._id) ? 'bg-brown1 text-white' : 'bg-white text-brown1'"
+>>>>>>> Stashed changes
         @click="appointments.onServiceSelected(service)"
     >
         <p class="text-2xl font-light">{{ service.name }}</p>

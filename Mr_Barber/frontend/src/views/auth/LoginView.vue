@@ -21,8 +21,8 @@
 </script>
 
 <template>
-  <h1 class="text-6xl font-extrabold text-white text-center mt-10" style="color: #D2AC67">Iniciar Sesión</h1>
-    <p class="text-2xl text-white text-center my-5" style="color: #b3b0ae">Si tienes una cuenta, inicia sesión</p>
+  <h1 class="text-6xl font-extrabold text-white text-center mt-10">Iniciar Sesión</h1>
+    <p class="text-2xl text-white text-center my-5">Si tienes una cuenta, inicia sesión</p>
     <FormKit
         id="loginForm"
         type="form"
@@ -54,7 +54,7 @@
             }"
         />
 
-        <FormKit type="submit">Iniciar Sesión</FormKit>
+        <FormKit type="submit" class="p-3 uppercase font-bold bg-brown1 rounded-full">Iniciar Sesión</FormKit>
     </FormKit>
 
 </template>

@@ -18,10 +18,16 @@ import { RouterLink } from 'vue-router';
         <nav class="mt-10 flex flex-col items-center space-y-5 lg:flex-row lg:justify-between lg:space-y-0">
             <RouterLink
                 v-for="authRoute in authRoutes"
+<<<<<<< Updated upstream
                 class="uppercase font-bold text-black"
+=======
+                class="p-3 uppercase font-bold text-white bg-brown1 rounded-full"
+>>>>>>> Stashed changes
                 :to="{name: authRoute.name}"
                 :class="{ 'hidden' : route.name === authRoute.name }"
             >{{ authRoute.text }}</RouterLink>
         </nav>
     </div>
 </template>
+
+p-3 text-white uppercase text-xs font-black rounded-lg
