@@ -22,23 +22,23 @@
         <p class="text-lg font-black" style="color: #D2AC67" >Servicios Solicitados en la cita</p>
         <div v-for="service in appointment.services">
             <p>{{ service.name }}</p>
-            <p class="text-2xl font-black text-blue">{{ formatCurrency( service.price ) }}</p>
+            <p class="text-2xl font-black text-blue-500">{{ formatCurrency( service.price ) }}</p>
         </div>
 
         <p class="text-2xl font-black text-right">
-            Total a pagar: <span class="text-blue"> {{ formatCurrency( appointment.totalAmount ) }} </span>
+            Total a pagar: <span class="text-blue-600"> {{ formatCurrency( appointment.totalAmount ) }} </span>
         </p>
 
         <div class="flex gap-2 items-center">
             <RouterLink
                 :to="{name: 'edit-appointment', params: { id : appointment._id} }"
-                class="bg-black rounded-lg p-3 text-white text-sm uppercase font-black flex-1 md:flex-none"
+                class="bg-slate-600 rounded-lg p-3 text-white text-sm uppercase font-black flex-1 md:flex-none"
             >
                 Editar Cita
             </RouterLink>
 
             <button
-                class="bg-red rounded-lg p-3 text-white text-sm uppercase font-black flex-1 md:flex-none"
+                class="bg-red-600 rounded-lg p-3 text-white text-sm uppercase font-black flex-1 md:flex-none"
                 @click="appointments.cancelAppointment(appointment._id)"
             >
                 Cancelar Cita
