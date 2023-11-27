@@ -1,7 +1,8 @@
 <script setup>
     import { useUserStore } from '../../stores/user'
-    const user = useUserStore()
     import { RouterLink } from 'vue-router';
+    const user = useUserStore()
+    
 
 </script>
 
@@ -17,11 +18,7 @@
 
                 <button
                     type="button"
-<<<<<<< Updated upstream
-                    class="bg-red-600 hover:bg-red-700 p-2 text-white uppercase text-xs font-extrabold rounded-lg"
-=======
                     class="bg-red hover:bg-red-700 p-2 text-white uppercase text-xs font-extrabold rounded-lg"
->>>>>>> Stashed changes
                     @click="user.logout"
                 >
                     Cerrar Sesión
@@ -36,11 +33,7 @@
 
                 <RouterLink
                     :to="{name: 'new-appointment'}"
-<<<<<<< Updated upstream
-                    class="p-3 text-gray-200 uppercase text-xs font-black rounded-lg bg-blue-700"
-=======
                     class="p-3 text-white uppercase text-xs font-black rounded-lg bg-brown1"
->>>>>>> Stashed changes
                 >
                     Nueva Cita
                 </RouterLink>

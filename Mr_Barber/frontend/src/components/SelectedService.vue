@@ -15,11 +15,7 @@
     <div class="border border-gray-600 rounded-lg p-5 flex justify-between items-center bg-brown1">
         <div>
             <p class="text-2xl font-extrabold text-white">{{ service.name }}</p>
-<<<<<<< Updated upstream
-            <p class="text-3xl font-black text-blue-500">{{ formatCurrency( service.price ) }}</p>
-=======
             <p class="text-3xl font-black text-white">{{ formatCurrency( service.price ) }}</p>
->>>>>>> Stashed changes
         </div>
         
         <button
