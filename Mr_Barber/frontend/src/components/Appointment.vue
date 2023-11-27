@@ -19,7 +19,7 @@
             Hora: <span class="font-light"> {{ appointment.time }} Horas.</span>
         </p>
 
-        <p class="text-lg font-black">Servicios Solicitados en la cita</p>
+        <p class="text-lg font-black" style="color: #D2AC67" >Servicios Solicitados en la cita</p>
         <div v-for="service in appointment.services">
             <p>{{ service.name }}</p>
             <p class="text-2xl font-black text-blue">{{ formatCurrency( service.price ) }}</p>

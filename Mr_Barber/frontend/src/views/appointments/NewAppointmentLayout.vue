@@ -13,7 +13,7 @@ import { RouterLink } from 'vue-router';
     })
 </script>
 
-
+bg-yellow-800 hover:text-white
 <template>
     <nav class="my-5 flex gap-3">
         <RouterLink

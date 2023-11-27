@@ -12,38 +12,6 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/auth',
-      name: 'auth',
-      component: () => import('../views/auth/AuthLayout.vue'),
-      children: [
-        {
-          path: 'login',
-          name: 'login',
-          component: () => import('../views/auth/LoginView.vue')
-        },
-        {
-          path: 'confirmar-cuenta/:token',
-          name: 'confirm-account',
-          component: () => import('../views/auth/ConfirmAccountView.vue')
-        },
-        {
-          path: 'registro',
-          name: 'register',
-          component: () => import('../views/auth/RegisterView.vue')
-        },
-        {
-          path: 'olvide-password',
-          name: 'forgot-password',
-          component: () => import('../views/auth/ForgotPasswordView.vue')
-        },
-        {
-          path: 'olvide-password/:token',
-          name: 'new-password',
-          component: () => import('../views/auth/NewPasswordView.vue')
-        },
-      ]
-    },
-    {
       path: '/admin',
       name: 'admin',
       component: () => import('../views/admin/AdminLayout.vue'),
@@ -99,6 +67,38 @@ const router = createRouter({
             },
           ]
         }
+      ]
+    },
+    {
+      path: '/auth',
+      name: 'auth',
+      component: () => import('../views/auth/AuthLayout.vue'),
+      children: [
+        {
+          path: 'registro',
+          name: 'register',
+          component: () => import('../views/auth/RegisterView.vue')
+        },
+        {
+          path: 'confirmar-cuenta/:token',
+          name: 'confirm-account',
+          component: () => import('../views/auth/ConfirmAccountView.vue')
+        },
+        {
+          path: 'login',
+          name: 'login',
+          component: () => import('../views/auth/LoginView.vue')
+        },
+        {
+          path: 'olvide-password',
+          name: 'forgot-password',
+          component: () => import('../views/auth/ForgotPasswordView.vue')
+        },
+        {
+          path: 'olvide-password/:token',
+          name: 'new-password',
+          component: () => import('../views/auth/NewPasswordView.vue')
+        },
       ]
     }
   ]

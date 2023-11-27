@@ -52,7 +52,7 @@ import { RouterLink } from 'vue-router';
     </div>
 
     <div class="space-y-8" v-if="!appointments.noServicesSelected">
-        <h3 class="text-3xl font-extrabold text-white">Fecha y Hora</h3>
+        <h3 class="text-3xl font-extrabold" style="color: #D2AC67">Fecha y Hora</h3>
 
         <div class="lg:flex gap-5 items-start">
             <div class="w-full lg:w-96 bg-d2ac67 flex justify-center rounded-lg">
