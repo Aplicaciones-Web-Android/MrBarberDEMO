@@ -1,14 +1,14 @@
 <script setup>
     import { useUserStore } from '../../stores/user'
-    const user = useUserStore()
     import { RouterLink } from 'vue-router';
+    const user = useUserStore()
 
 </script>
 
 
 <template>
     <div class="flex justify-between">
-        <h1 class="text-2xl lg:text-6xl font-black" style="color: #D2AC67;">Mr Barber</h1>
+        <h1 class="text-2xl lg:text-6xl font-black text-white">Mr Barber</h1>
 
         <div class="flex flex-col space-y-5">
            <div class="flex gap-2 items-center">
