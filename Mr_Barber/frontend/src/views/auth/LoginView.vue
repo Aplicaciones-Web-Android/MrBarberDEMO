@@ -1,4 +1,4 @@
-<script setup>
+<script setup="ts">
     import { inject } from 'vue'
     import { useRouter } from 'vue-router'
     import AuthAPI from '../../api/AuthAPI';

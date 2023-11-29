@@ -1,4 +1,4 @@
-<script setup>
+<script setup = "ts">
     import { useUserStore } from '../../stores/user'
     import { RouterLink } from 'vue-router';
     const user = useUserStore()

@@ -1,4 +1,4 @@
-<script setup>
+<script setup="ts">
     import AdminAppointment from '../../components/AdminAppointment.vue'
     import { useUserStore } from '../../stores/user'
 

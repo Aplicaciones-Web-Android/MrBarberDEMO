@@ -1,4 +1,4 @@
-<script setup>
+<script setup="ts">
     import { inject } from 'vue'
     import { reset } from '@formkit/vue'
     import AuthAPI from '../../api/AuthAPI'

@@ -1,4 +1,4 @@
-<script setup>
+<script setup="ts">
     import Appointment from '../../components/Appointment.vue'
     import { useUserStore } from '../../stores/user'
     const user = useUserStore()

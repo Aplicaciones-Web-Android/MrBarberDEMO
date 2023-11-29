@@ -1,4 +1,4 @@
-<script setup>
+<script setup="ts">
 import { RouterLink } from 'vue-router';
 
     import { useRoute } from 'vue-router'

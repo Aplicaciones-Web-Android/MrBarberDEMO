@@ -1,4 +1,4 @@
-<script setup>
+<script setup="ts">
     import ServiceItem from '../../components/ServiceItem.vue'
     import {useServicesStore} from '../../stores/services'
     const store = useServicesStore()

@@ -1,4 +1,4 @@
-<script setup>
+<script setup="ts">
     import { onMounted, inject, ref } from 'vue'
     import { useRoute, useRouter } from 'vue-router'
     import AuthAPI from '../../api/AuthAPI';
