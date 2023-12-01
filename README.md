@@ -23,7 +23,7 @@ La aplicación utiliza una base de daots MongoDB Compass para almacenar servicio
 en JavaScript (Node.js v18.17.0) y se estructuró con Express.js para el backend y Tailwind CSS
 para el frontend.
 
-###Tabla de Contenidos 
+### Tabla de Contenidos 
 1. [Requerimientos](#Requerimientos)
 2. [Instalación](#Instalación)
 3. [Configuración](#Configuración)
