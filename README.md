@@ -3,7 +3,7 @@
 ## Resumen Ejecutivo
 
 ### Descripción
-Mr. Barber es una aplicación web diseñada para facilitar la gestión de citas en una berbería. 
+Mr. Barber es una aplicación web diseñada para facilitar la gestión de citas en una barbería. 
 Permite a los clientes crear cuentas, programar citas, modificar detalles y visualizar su historial.
 La solución busca evitar confusiones en las citas y brindar una experience eficiente tanto para los clientes
 como para el personal.
