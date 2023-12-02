@@ -28,7 +28,21 @@
         <p class="text-2xl font-black text-right">
             Total a pagar: <span class="text-blue-600"> {{ formatCurrency( appointment.totalAmount ) }} </span>
         </p>
+        <div class="flex gap-2 items-center">
+                <RouterLink
+                    :to="{name: 'edit-appointment', params: { id : appointment._id} }"
+                    class="bg-black rounded-lg p-3 text-white text-sm uppercase font-black flex-1 md:flex-none"
+                >
+                    Editar Cita
+                </RouterLink>
 
+                <button
+                    class="bg-red rounded-lg p-3 text-white text-sm uppercase font-black flex-1 md:flex-none"
+                    @click="appointments.cancelAppointment(appointment._id)"
+                >
+                    Cancelar Cita
+                </button>
+                 </div>
     </div>
 </template>
 
