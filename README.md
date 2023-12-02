@@ -60,6 +60,9 @@ de igual manera por privado.
    Una vez hechas estas instalaciones se corre el frontend de la siguiente manera.
    - npm run dev
 
+Para ejecutar las prubeas manualmente solo se seguiran los pasos como si se fuese a crear nuevas citas. 
+
+
 ### Configuración
 - Configuración del producto: Archivos de configuración en la carpeta del frontend y backend
 - Configuración de requerimientos: Ajustes en la base de datos y en el archivo '.env.local'
