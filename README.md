@@ -15,11 +15,11 @@ la programación de citas y mejorara la organización.
 
 ### Solución
 La solución implementada es una página web que permite a los clientes crear cuentas, programar citas, 
-modificar detalles y cancelar reservaciones. Además, un sistema de adminsitrador proporcinoa acceso 
+modificar detalles y cancelar reservaciones. Además, un sistema de adminsitrador que proporciona acceso 
 a la visualización de citas futuras y del día.
 
 ### Arquitectura
-La aplicación utiliza una base de daots MongoDB Compass para almacenar servicios y citas. Se desarrolló 
+La aplicación utiliza una base de datos MongoDB Compass para almacenar servicios y citas. Se desarrolló 
 en JavaScript (Node.js v18.17.0) y se estructuró con Express.js para el backend y Tailwind CSS
 para el frontend.
 
